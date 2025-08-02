@@ -17,15 +17,6 @@ def worker_thread(job_q: queue.Queue, log_q: queue.Queue, progress_q: queue.Queu
         for i in range(100):
             progress_q.put(i + 1)
 
-            # Send log messages periodically
-            if i % 10 == 0:  # Log every 10 items
-                log_q.put(f"Step {i+1}: Processing item {i+1}/100")
-
-            # Send tqdm-style progress occasionally
-            if i % 25 == 0:
-                percentage = (i + 1)
-                log_q.put(f"Progress: {percentage}% |{'#' * (percentage//4)}{'-' * (25-percentage//4)}| {i+1}/100")
-
             time.sleep(0.05)  # Simulate work
 
         log_q.put("Worker thread completed!")
