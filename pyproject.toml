@@ -1,0 +1,10 @@
+[project]
+name = "dearpyguidemo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dearpygui>=2.1.0",
+    "tqdm>=4.67.1",
+]
