@@ -7,5 +7,14 @@ requires-python = ">=3.12"
 dependencies = [
     "dearpygui>=2.1.0",
     "huey>=2.5.3",
+    "matplotlib>=3.10.5",
+    "networkx>=3.5",
     "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.10.2",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
 ]
